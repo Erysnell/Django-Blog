@@ -1,8 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
+{% if user.is_authenticated and user == post.author %}
 <h1>Delete post</h1>
 <form action="" method="post">{% csrf_token %}
  <p>Are you sure you want to delete "{{ post.title }}"?</p>
  <input type="submit" value="Confirm">
 </form>
+{% else %}
+<p>You don't have permission to delete this post.</p>
+<a href="{% url 'home' %}">Return to home</a>
+{% endif %}
 {% endblock content %}
