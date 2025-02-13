@@ -1,15 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="post-entry">
- <h2>{{ object.title }}</h2>
- <p>{{ object.body }}</p>
-</div>
+<article class="post-entry post-detail">
+    <h1>{{ object.title }}</h1>
+    <div class="post-meta">
+        <span>By {{ object.author }}</span>
+        <span>{{ object.created_date|date:"F j, Y" }}</span>
+    </div>
+    <div class="post-content">
+        {{ object.body|linebreaks }}
+    </div>
 
-{% if user.is_authenticated and user == post.author %}
-<a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a>
-<p><a href="{% url 'post_delete' post.pk %}">+ Delete Blog Post</a></p>
-{% endif %}
-
+    {% if user.is_authenticated and user == post.author %}
+    <div class="post-actions">
+        <a href="{% url 'post_edit' post.pk %}" class="button button-secondary">Edit Post</a>
+        <a href="{% url 'post_delete' post.pk %}" class="button button-secondary">Delete Post</a>
+    </div>
+    {% endif %}
+</article>
 {% endblock content %}
-
-
