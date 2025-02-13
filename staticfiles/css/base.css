@@ -95,6 +95,7 @@ body {
     background: var(--primary-gradient);
     color: white;
     box-shadow: 0 2px 4px rgba(79, 70, 229, 0.2);
+    
 }
 
 .button-primary:hover {
@@ -264,6 +265,8 @@ body {
     font-weight: 500;
     color: var(--text-primary);
 }
+
+
 
 /* Empty State */
 .empty-state {
