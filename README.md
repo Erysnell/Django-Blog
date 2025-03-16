@@ -38,5 +38,5 @@ Si tienes alguna pregunta o sugerencia, no dudes en contactarme:
 
   ---
 
-  URL del Proyecto
-  https://github.com/Erysnell/Django-Blog/
+  URL del Proyecto en roadmap.sh
+https://roadmap.sh/projects/personal-blog
