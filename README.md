@@ -11,7 +11,19 @@ Este es un proyecto de blog desarrollado en Django que permite a los usuarios cr
 - **Vistas basadas en clases**: Uso de vistas genéricas de Django para simplificar el desarrollo.
 
 ---
+## Instalación
+- Crea un entorno virtual
+  ```python
+  python -m venv env
+  ```
+- Activa el Entorno virtual
+- Instala las dependencias de requirements.txt
+  ```python
+  pip install -r requirements.txt
+  ```
 
+  ---
+  
 ## Contribución
 Si deseas contribuir a este proyecto, sigue estos pasos:
 
